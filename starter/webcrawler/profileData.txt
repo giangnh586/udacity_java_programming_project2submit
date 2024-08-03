@@ -1,0 +1,2 @@
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 1s 682ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 3s 198ms

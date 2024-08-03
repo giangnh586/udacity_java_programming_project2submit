@@ -1,0 +1,41 @@
+Questions
+
+1). Why PageParserImpl is much longer running with ParallelWebCrawler but in the same quantity of time.
+    Answer: Because the ParallelWebCrawler took 16 urls.
+            SequentialWebCrawler took 2 ones.
+
+2). Why the sequential web crawler was able to read more web pages than the parallel crawler.
+    Answer: I think it because of old computers not have CPU like multi-core CPU.
+
+    Which the parallel web crawler perform better than the sequential crawler. Why it perform better.
+    Answer: Well, In my opinion, need to configure numerous core CPU to the computer. In a same timeout, a numerous CPU could do multi tasks in parallel and make its crawler parse numerous web pages.
+
+3). What is the cross-cutting concern being addressed by the method profiler.
+    Answer: To estimate the execution time of invoking methods.
+
+    What join points are used by the method profiler.
+    Answer: method invocations.
+
+
+4). Design patterns used in project:
+    Answer:
+    +) Dependency Injection: I use Guice framework to implement.
+    +) Abstract Factory: PageParserFactory.
+    +) Builder: CrawlerConfiguration.Builder.
+
+
+    For each pattern, name one thing about the pattern that you LIKED, and one thing you DISLIKED. If you did not like anything, you can name two things you disliked.
+     +) Dependency Injection:
+         ++) Like: I think that the code is more adjustable when switching structure code without any mismatched. I meet no challegen when running the structure code in other enviroment such as development, production, test.
+         ++) Dislike: I need more support for the DI frameworks because it is difficult to implement IoC container.
+     +) Abstract Factory:
+         ++) Like: I see that if related to a brand new parser type, the old code no need to update.
+         ++) Dislike: The code become harder to appoarch and read for others.
+     +) Builder:
+         ++) Like: I don't need to refer to the setters, create a variable, make a return.
+         ++) Dislike: Creating the builder boilerplate can take unmeasured time, I really don't like waitting for so long.
+
+    
+
+
+
